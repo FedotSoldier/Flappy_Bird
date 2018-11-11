@@ -1,0 +1,835 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"d",
+				"double"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"paddin",
+				"padding-top\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"padd",
+				"padding\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"mar",
+				"margin-bottom\tproperty"
+			],
+			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"r",
+				"right\tfloat"
+			],
+			[
+				"in",
+				"inline\tdisplay"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"border-s",
+				"border-style\tproperty"
+			],
+			[
+				"coor",
+				"color\tproperty"
+			],
+			[
+				"tr",
+				"True"
+			],
+			[
+				"s",
+				"symbols"
+			],
+			[
+				"us",
+				"user_id"
+			],
+			[
+				"me",
+				"messages"
+			],
+			[
+				"str",
+				"stroka"
+			],
+			[
+				"patt",
+				"pattern4"
+			],
+			[
+				"bo",
+				"bool"
+			],
+			[
+				"S",
+				"System"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"gro",
+				"groupid"
+			],
+			[
+				"mes",
+				"message"
+			],
+			[
+				"patter",
+				"pattern3"
+			],
+			[
+				"use",
+				"user_id"
+			],
+			[
+				"fr",
+				"from"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"u",
+				"u_id"
+			],
+			[
+				"inp",
+				"input"
+			],
+			[
+				"ar",
+				"args"
+			],
+			[
+				"i",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"thro",
+				"throws"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"ne",
+				"nextInt"
+			],
+			[
+				"cl",
+				"cl\tclass"
+			],
+			[
+				"fir",
+				"first_equal_one"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"pr",
+				"println"
+			],
+			[
+				"nu",
+				"num_1"
+			],
+			[
+				"n",
+				"num"
+			],
+			[
+				"m",
+				"main\tmethod (main)"
+			],
+			[
+				"day",
+				"days"
+			],
+			[
+				"temps",
+				"temps_night"
+			],
+			[
+				"get",
+				"getweather"
+			],
+			[
+				"da",
+				"days"
+			],
+			[
+				"for",
+				"forecast"
+			],
+			[
+				"te",
+				"temps_night"
+			],
+			[
+				"messa",
+				"messages"
+			],
+			[
+				"sele",
+				"select_one"
+			],
+			[
+				"co",
+				"courses"
+			],
+			[
+				"ht",
+				"html"
+			],
+			[
+				"VkB",
+				"VkBotLongPoll"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"Vk",
+				"VkKeyboard"
+			],
+			[
+				"from",
+				"from_id"
+			],
+			[
+				"mess",
+				"messages"
+			],
+			[
+				"vk",
+				"vk_session"
+			],
+			[
+				"v",
+				"vostok"
+			],
+			[
+				"B",
+				"Bauhaus"
+			],
+			[
+				"va",
+				"variable"
+			],
+			[
+				"ra",
+				"r_var"
+			],
+			[
+				"F",
+				"FileNotFoundError"
+			],
+			[
+				"new",
+				"new1"
+			],
+			[
+				"de",
+				"deleteText"
+			],
+			[
+				"ge",
+				"getText"
+			],
+			[
+				"f",
+				"f_top"
+			],
+			[
+				"se",
+				"second_block"
+			],
+			[
+				"sort",
+				"sortlist"
+			],
+			[
+				"p",
+				"print"
+			],
+			[
+				"Im",
+				"Image"
+			],
+			[
+				"I",
+				"ImageTk"
+			],
+			[
+				"k",
+				"keyUp"
+			],
+			[
+				"post",
+				"post_detaill"
+			],
+			[
+				"appro",
+				"approved_comment"
+			],
+			[
+				"j",
+				"jup"
+			],
+			[
+				"ali",
+				"alien"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"ga",
+				"gameoverscene"
+			],
+			[
+				"spinner",
+				"spinner_list"
+			],
+			[
+				"background",
+				"background_layer"
+			],
+			[
+				"spi",
+				"spinners"
+			],
+			[
+				"gho",
+				"ghost"
+			],
+			[
+				"gh",
+				"ghost_list"
+			],
+			[
+				"switch",
+				"switch_emotion"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"be",
+				"beated_ghosts"
+			],
+			[
+				"ghos",
+				"ghost"
+			],
+			[
+				"game",
+				"gameoverscene"
+			],
+			[
+				"al",
+				"alien"
+			],
+			[
+				"ghost",
+				"ghost_list"
+			],
+			[
+				"spr",
+				"spritelist"
+			],
+			[
+				"posi",
+				"positions"
+			],
+			[
+				"bac",
+				"background_layer"
+			],
+			[
+				"back",
+				"background_layer"
+			],
+			[
+				"backgrou",
+				"background_layer"
+			],
+			[
+				"ba",
+				"background_layer"
+			],
+			[
+				"Post",
+				"PostForm"
+			],
+			[
+				"ti",
+				"timezone"
+			],
+			[
+				"url",
+				"url_right"
+			],
+			[
+				"ex",
+				"extension"
+			],
+			[
+				"pic",
+				"picture_extensions"
+			],
+			[
+				"fi",
+				"findAll"
+			],
+			[
+				"qw",
+				"qwerty"
+			],
+			[
+				"fa",
+				"False"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"rules",
+				"ruleslayer"
+			],
+			[
+				"ru",
+				"rules"
+			],
+			[
+				"ac",
+				"active"
+			],
+			[
+				"b",
+				"bicon"
+			],
+			[
+				"but",
+				"button2"
+			],
+			[
+				"sett",
+				"settingscale"
+			],
+			[
+				"he",
+				"heroes"
+			],
+			[
+				"alien",
+				"alienn"
+			],
+			[
+				"cur",
+				"currentalienr"
+			],
+			[
+				"cu",
+				"currentalienr"
+			],
+			[
+				"set",
+				"setting_layer"
+			],
+			[
+				"setting",
+				"setting_layer"
+			],
+			[
+				"her",
+				"heror"
+			],
+			[
+				"alie",
+				"alienpn"
+			],
+			[
+				"a",
+				"alieny"
+			],
+			[
+				"setti",
+				"setting_layer"
+			],
+			[
+				"settings",
+				"settingscene"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"play",
+				"play"
+			],
+			[
+				"quit",
+				"quit"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"pla",
+				"play"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"men",
+				"View: Toggle Menu"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 149.0,
+		"history":
+		[
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Фёдор/Desktop/Flappy_Bird/test/desktop/src/com/mygdx/game/desktop/DesktopLauncher.java",
+		"/C/Users/Фёдор/Desktop/Flappy_Bird/test/build.gradle",
+		"/C/Users/Фёдор/Desktop/JLearn/Main.java",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/Hystoric site/cssExample.css",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/Hystoric site/mainPage.html",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/Haudi Lesson/mycss.css",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/Haudi Lesson/mysite.html",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/Hystoric site/main.html",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/cssExample.css",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/Constants.py",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/New chat bot with Sasha.py",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/Bot_example_from_docs.py",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/Simplified_docs_chat_bot.py",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/Funcs.py",
+		"/C/Users/Фёдор/Desktop/yandex.py",
+		"/C/Users/Фёдор/Desktop/Python Tutor Check/PTChecking.py",
+		"/C/Users/Фёдор/Desktop/Sokobano/Sokobano/src/gdi1sokoban/logic/Identifier.java",
+		"/C/Users/Фёдор/Desktop/Sokobano/Sokobano/src/gdi1sokoban/Application.java",
+		"/C/Users/Фёдор/Desktop/read.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/Pack Method.py",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/New_bot_with_botlongpoll.py",
+		"/C/Users/Фёдор/Desktop/parsing.py",
+		"/C/Users/Фёдор/Desktop/JLearn/Math_ops.java",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/mysite.html",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/mycss.css",
+		"/C/Users/Фёдор/Desktop/HTML Lesson/exp.html",
+		"/C/Users/Фёдор/Desktop/Python Tutor Check/PythonTutorProgram.java",
+		"/C/Users/Фёдор/Desktop/exp.py",
+		"/C/Users/Фёдор/Desktop/JLearn/Program.java",
+		"/C/Users/Фёдор/Desktop/Python Tutor Check/exp.py",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/New_bot_with_botlongpool.py",
+		"/C/Users/Фёдор/Desktop/Adjusting the Padding of an Element.html",
+		"/C/Users/Фёдор/Desktop/Strange.java",
+		"/C/Users/Фёдор/Desktop/JLearn/ForLoop.java",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/VK_Chat_Bot.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/vk_api/vk_api.py",
+		"/C/Users/Фёдор/Desktop/PythonTutorProgram.java",
+		"/C/Users/Фёдор/Desktop/s0.py",
+		"/C/Users/Фёдор/AppData/Roaming/Sublime Text 3/Packages/User/Java_1.8.sublime-build",
+		"/C/Users/Фёдор/Desktop/s2.py",
+		"/C/Users/Фёдор/Desktop/s1.py",
+		"/C/Users/Фёдор/Desktop/JLearn/User_input.java",
+		"/C/Users/Фёдор/Desktop/JLearn/Conditional_ops.java",
+		"/C/Users/Фёдор/Desktop/Python Tutor Check/result",
+		"/C/Users/Фёдор/Desktop/Python Tutor Check/script.py",
+		"/C/Users/Фёдор/Desktop/filewriting.py",
+		"/C/Users/Фёдор/Desktop/PTChecking.py",
+		"/C/Users/Фёдор/Desktop/JLearn/PythonTutor.java",
+		"/C/Users/Фёдор/Desktop/e.py",
+		"/C/Users/Фёдор/Desktop/File_reading_and_writing.java",
+		"/C/Users/Фёдор/Desktop/JLearn/File_reading_and_writing.java",
+		"/C/Users/Фёдор/Desktop/Javaexp.java",
+		"/C/Users/Фёдор/Desktop/jvexp.java",
+		"/C/Users/Фёдор/Desktop/Cmd_args.java",
+		"/C/Users/Фёдор/Desktop/JLearn/Variables.java",
+		"/C/Users/Фёдор/Desktop/JLearn/PythonTutor tasks/Task_1_7.java",
+		"/C/Users/Фёдор/Desktop/Jlearn/Math_ops.java",
+		"/C/Users/Фёдор/Desktop/Jlearn/User_input.java",
+		"/C/Users/Фёдор/Desktop/Jlearn/Variables.java",
+		"/C/Users/Фёдор/Desktop/Jlearn/FirstProgram.java",
+		"/C/Users/Фёдор/Desktop/Jlearn/Main.java",
+		"/C/Users/Фёдор/Desktop/jjava/Main.java",
+		"/C/Users/Фёдор/Desktop/Exp.java",
+		"/C/Users/Фёдор/Desktop/Java learning/FirstProgram.java",
+		"/C/Users/Фёдор/Desktop/Java learning/Main.java",
+		"/C/Users/Фёдор/Desktop/Java learning/fl/Main.java",
+		"/C/Users/Фёдор/Desktop/Java learning/Main.class",
+		"/C/Users/Фёдор/Desktop/Java learning/HelloWorld.java",
+		"/C/Users/Фёдор/Desktop/HelloWorld.java",
+		"/C/Users/Фёдор/Desktop/HelloWorld",
+		"/C/Users/Фёдор/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Фёдор/Desktop/HelloWorld.class",
+		"/C/Users/Фёдор/Desktop/jprogram.java",
+		"/C/Users/Фёдор/AppData/Roaming/Sublime Text 3/Packages/User/Java.sublime-build",
+		"/C/Users/Фёдор/Desktop/ML.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/vk_api/bot_longpoll.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/vk_api/keyboard.py",
+		"/C/Users/Фёдор/Desktop/Files/My Files/Different/old_forecast_var.py",
+		"/C/Users/Фёдор/Desktop/slices.py",
+		"/C/Users/Фёдор/Desktop/parsing (2).py",
+		"/C/Users/Фёдор/Desktop/time_lib_exp.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Parsers/Parser.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Parsers/My_Parser.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Parsers/Updated Parser/picloader.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Parsers/Updated Parser/Parser.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Log Parsing/main.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/USD I EUR . Курс.py",
+		"/C/Users/Фёдор/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/bs4/element.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/bot_longpoll.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/longpoll.py",
+		"/C/Users/Фёдор/Desktop/chess_zadacha.py",
+		"/C/Users/Фёдор/Desktop/INPUT.TXT",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/Text (multiline pole).py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/Radiobutton и Checkbutton.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/messages_bot/user_messages_bot.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/tests/test_keyboard.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/vk_config.v2.json",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/simple_example.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/docs/bot_longpoll.rst",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/docs/longpoll.rst",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/requests_pool.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/messages_bot/README.md",
+		"/C/Users/Фёдор/Desktop/VK Chat-Bot/vk_config.v2.json",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/docs/keyboard.rst",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/README.md",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/vk_api folder/vk_api/examples/messages_bot/bot.png",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Chat-Bots/VK_Chat_Bot.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Chat-Bots/New chat bot with Sasha.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Chat-Bots/vk_chat-bot_usermsg.txt",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/Widgets - Homework(Rainbow).py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/HW - 'Mini Text Editor'.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/file for experiments.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/exp.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Kivy Lessons/Lesson 2.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Kivy Lessons/Lesson 4 Part 1.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Kivy Lessons/Lesson 4 Part 2.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Kivy Lessons/Lesson 1.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Django-projects/mysite/mysite/settings.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Django-projects/mysite/mysite/urls.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Mini-Projects/Django-projects/mysite/mainapp/admin.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/xxx.py",
+		"/C/Users/Фёдор/Desktop/x.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/Widgets.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/'What is Tkinter'_Part_1.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/'What is Tkinter'_Part_2.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/Wodgets - Homework(Rainbow).py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/locker/python_locker.py",
+		"/C/Users/Фёдор/Desktop/Files/Python Lessons/Other/Tkinter Lessons/Lesson_1_Part_2.py"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 111.2,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 42.4
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Java_1.8.sublime-build",
+	"project": "DesktopLauncher.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 148.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
