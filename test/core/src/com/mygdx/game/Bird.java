@@ -16,7 +16,7 @@ public class Bird {
     // Конструктор класса Bird
     public Bird() {
         img = new Texture("bird.png");
-        position = new Vector2(100, 380);
+        position = new Vector2(100, 280);
         vy = 0;
         gravity = -0.7f;
     }
@@ -36,7 +36,7 @@ public class Bird {
     }
 
     public void recreate() {
-        position = new Vector2(100, 380);
+        position = new Vector2(100, 280);
         vy = 0;
     }
 }

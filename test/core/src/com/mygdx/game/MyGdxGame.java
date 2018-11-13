@@ -8,13 +8,21 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
+import java.util.ArrayList;
+
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Background bg;
 	Bird bird;
 	Obstacles obstacles;
+	Points points;
 	boolean gameOver;
+	// Игрок нажал на рестарт, но игра не началась
+	// Начнется когда он в первый раз нажмет SPACE
+	boolean transCase;
 	Texture restartTexture;
+	// Очки за текущую игру
+	int curPoints;
 
 	// Запускается единожды
     // В нем загружаются в память все необходимые элементы,
@@ -27,9 +35,15 @@ public class MyGdxGame extends ApplicationAdapter {
 		bg = new Background();
 		bird = new Bird();
 		obstacles = new Obstacles();
+		points = new Points();
 		gameOver = false;
+		// Игра началась, но птичка сразу не падает
+		// Ждем пока игрок нажмет SPACE и запустит игру
+		transCase = true;
+		curPoints = 0;
 		restartTexture = new Texture("RestartBtn.png");
 	}
+
 	// Вызывается 60 раз в секунду
 	@Override
 	public void render () {
@@ -43,9 +57,10 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch.begin();  // Начало отрисовки
 		bg.render(batch);
 		bird.render(batch);
+		obstacles.render(batch);
 		if (gameOver)
 			batch.draw(restartTexture, 200, 200);
-		obstacles.render(batch);
+		points.render(batch);
 		batch.end();  // Зкаканчиваем отрисовку
 	}
 
@@ -53,14 +68,33 @@ public class MyGdxGame extends ApplicationAdapter {
 	// Метод для просчета математики игры
     public void update() {
 	    // Обновление позиций объектов
-        // Двигаю bg(в его методе update)
 		if (!gameOver){
+			if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
+				if (transCase)
+					transCase = false;
+			}
 			bg.update();
-			bird.update();
-			obstacles.update();
+			// Когда игрок в первый раз после проигрыша
+			// нажал на SPACE, то до второго нажатия
+			// птица не падает и трубы не вылезают
+			if (!transCase) {
+				obstacles.update();
+				bird.update();
+			}
+
+			// Проверяем, не прошла ли птичка какую-нибудь из труб впереди нее
+			for (int i = 0; i < obstacles.obsAhead.size(); i++) {
+				if (bird.position.x >= obstacles.obsAhead.get(i).position.x + 50) {
+					obstacles.obsAhead.remove(i);
+					curPoints += 1;
+					System.out.println(curPoints);
+                    // Обновляем показатель счета в игре - птичка получила +1 очко
+                    points.update(curPoints);
+				}
+			}
+
 			// Проверка не задела ли птичка какую - нибудь из труб
 			for (int i = 0; i < obstacles.obs.length; i++) {
-				// Можно чуть уменьшить рамки для точного отсутствия проигрыша без реальной причины
 				// Проверяем не задевает ли трубу первая точка птицы(начало птицы - координата x)
 				if (bird.position.x > obstacles.obs[i].position.x && bird.position.x < obstacles.obs[i].position.x + 50) {
 					if (!obstacles.obs[i].emptySpace.contains(bird.position))
@@ -82,14 +116,19 @@ public class MyGdxGame extends ApplicationAdapter {
 		}
 
 		// Начинаем новую игру, если gameOver = true и нажата клавиша SPACE
-		else if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE) && gameOver) {
-			recreate();
+		else if (gameOver) {
+			if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
+				transCase = true;
+				curPoints = 0;
+				recreate();
+			}
 		}
     }
 
     public void recreate() {
 		bird.recreate();
 		obstacles.recreate();
+		points.update(0);
 		gameOver = false;
 	}
 
