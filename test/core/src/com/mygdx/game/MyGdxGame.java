@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
@@ -20,7 +21,6 @@ public class MyGdxGame extends ApplicationAdapter {
 	// Игрок нажал на рестарт, но игра не началась
 	// Начнется когда он в первый раз нажмет SPACE
 	boolean transCase;
-	Texture restartTexture;
 	// Очки за текущую игру
 	int curPoints;
 
@@ -41,7 +41,6 @@ public class MyGdxGame extends ApplicationAdapter {
 		// Ждем пока игрок нажмет SPACE и запустит игру
 		transCase = true;
 		curPoints = 0;
-		restartTexture = new Texture("RestartBtn.png");
 	}
 
 	// Вызывается 60 раз в секунду
@@ -59,7 +58,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		bird.render(batch);
 		obstacles.render(batch);
 		if (gameOver)
-			batch.draw(restartTexture, 200, 200);
+			points.renderRestartTxt(batch);
 		points.render(batch);
 		batch.end();  // Зкаканчиваем отрисовку
 	}
@@ -87,7 +86,6 @@ public class MyGdxGame extends ApplicationAdapter {
 				if (bird.position.x >= obstacles.obsAhead.get(i).position.x + 50) {
 					obstacles.obsAhead.remove(i);
 					curPoints += 1;
-					System.out.println(curPoints);
                     // Обновляем показатель счета в игре - птичка получила +1 очко
                     points.update(curPoints);
 				}
@@ -117,9 +115,16 @@ public class MyGdxGame extends ApplicationAdapter {
 
 		// Начинаем новую игру, если gameOver = true и нажата клавиша SPACE
 		else if (gameOver) {
+			// System.out.println(points.random);
+			points.moveObjects();
+			// System.out.println(points.random);
 			if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
+				// Переход к промежуточной сцене
+				// (когда птица не падает и препятствия не вылезают)
 				transCase = true;
+				// Очки обнуляются
 				curPoints = 0;
+				// Пересоздаем все, что нужно функцией recreate
 				recreate();
 			}
 		}
@@ -128,7 +133,7 @@ public class MyGdxGame extends ApplicationAdapter {
     public void recreate() {
 		bird.recreate();
 		obstacles.recreate();
-		points.update(0);
+		points.recreate();
 		gameOver = false;
 	}
 
