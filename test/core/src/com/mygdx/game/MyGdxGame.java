@@ -23,6 +23,8 @@ public class MyGdxGame extends ApplicationAdapter {
 	boolean transCase;
 	// Очки за текущую игру
 	int curPoints;
+	// Отмер времени с того момента, как игрок проиграл(gameOver == true)
+	long timeSinceGameOver;
 
 	// Запускается единожды
     // В нем загружаются в память все необходимые элементы,
@@ -41,6 +43,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		// Ждем пока игрок нажмет SPACE и запустит игру
 		transCase = true;
 		curPoints = 0;
+		timeSinceGameOver = 0;
 	}
 
 	// Вызывается 60 раз в секунду
@@ -95,30 +98,37 @@ public class MyGdxGame extends ApplicationAdapter {
 			for (int i = 0; i < obstacles.obs.length; i++) {
 				// Проверяем не задевает ли трубу первая точка птицы(начало птицы - координата x)
 				if (bird.position.x > obstacles.obs[i].position.x && bird.position.x < obstacles.obs[i].position.x + 50) {
-					if (!obstacles.obs[i].emptySpace.contains(bird.position))
+					if (!obstacles.obs[i].emptySpace.contains(bird.position)) {
 						gameOver = true;
+						timeSinceGameOver = System.currentTimeMillis();
+					}
 				}
 				// Не задевает ли трубу середина птицы
 				else if (bird.position.x + 56 > obstacles.obs[i].position.x && bird.position.x + 56 < obstacles.obs[i].position.x + 50) {
-					if (!obstacles.obs[i].emptySpace.contains(bird.position.x + 56, bird.position.y))
+					if (!obstacles.obs[i].emptySpace.contains(bird.position.x + 56, bird.position.y)) {
 						gameOver = true;
+						timeSinceGameOver = System.currentTimeMillis();
+					}
 				}
 				// Не задевает ли трубу передняя часть птицы(x + 56, тк спрайт у нас 56x40 пикселей)
 				else if (bird.position.x + 28 > obstacles.obs[i].position.x && bird.position.x + 28 < obstacles.obs[i].position.x + 50) {
-					if (!obstacles.obs[i].emptySpace.contains(bird.position.x + 28, bird.position.y))
+					if (!obstacles.obs[i].emptySpace.contains(bird.position.x + 28, bird.position.y)) {
 						gameOver = true;
+						timeSinceGameOver = System.currentTimeMillis();
+					}
 				}
 			}
-			if (bird.position.y >= 600 - 40 || bird.position.y <= 0)
+			if (bird.position.y >= 600 - 40 || bird.position.y <= 0) {
 				gameOver = true;
+				timeSinceGameOver = System.currentTimeMillis();
+			}
 		}
 
 		// Начинаем новую игру, если gameOver = true и нажата клавиша SPACE
 		else if (gameOver) {
-			// System.out.println(points.random);
 			points.moveObjects();
-			// System.out.println(points.random);
-			if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
+			if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE) &&
+				System.currentTimeMillis() - timeSinceGameOver > 1000) {
 				// Переход к промежуточной сцене
 				// (когда птица не падает и препятствия не вылезают)
 				transCase = true;
