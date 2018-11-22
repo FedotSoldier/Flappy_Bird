@@ -81,6 +81,7 @@ public class Points {
         }
     }
 
+    // Отрисовка табло с очками
     public void render(SpriteBatch batch) {
         // Сумма ширин всех изображений очков
         widthSum = 0;
