@@ -96,6 +96,9 @@ public class Points {
     public void updateRestartPos() {
         // Спрайт с изображением Restart
         // получает новую начальную позицию
+
+        // Перемешиваем список со случайными
+        // начальными позициями текстуры Restart
         Collections.shuffle(random);
 
         restartPos = new Vector2(random.get(0).x, random.get(0).y);

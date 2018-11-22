@@ -21,13 +21,13 @@ public class Background {
         }
     }
     // Скорость движения заднего фона(в пикселях)
-    private int speed;
+    private double speed;
     // Массив с элементами класса заднего фона
     private BGPicture[] backs;
 
     // Конструктор
-    public Background() {
-        speed = 1;
+    public Background(double spd) {
+        speed = spd;
         // Массив с изображениями заднего фона
         backs = new BGPicture[2];
         // Два изображения заднего фона записываем в массив backs

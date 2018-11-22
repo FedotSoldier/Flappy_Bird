@@ -4,7 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class MainGameScene {
+public class MainGameScene implements SceneInterface{
+    // Сцена, которую надо отобразить
+    String necessaryScene;
     Background bg;
     Bird bird;
     Obstacles obstacles;
@@ -23,7 +25,10 @@ public class MainGameScene {
 
     // Конструктор
     public MainGameScene() {
-        bg = new Background();
+        // Это не первая сцена, которая
+        // отображается при запуске игры
+        necessaryScene = null;
+        bg = new Background(1);
         bird = new Bird();
         obstacles = new Obstacles();
         points = new Points();
@@ -36,6 +41,7 @@ public class MainGameScene {
         timeSinceGameOver = 0;
     }
 
+    @Override
     public void render(SpriteBatch batch) {
         bg.render(batch);
         bird.render(batch);
@@ -47,12 +53,18 @@ public class MainGameScene {
 
     // Все обновления происходят здесь
     // Метод для просчета математики игры
+    @Override
     public void update() {
         if (isGame || transCase){
             if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
                 if (transCase) {
                     transCase = false;
                     isGame = true;
+                }
+            }
+            else if (Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)) {
+                if (transCase) {
+                    setNecessaryScene("menuScene");
                 }
             }
             bg.update();
@@ -122,13 +134,30 @@ public class MainGameScene {
                 // Пересоздаем все, что нужно функцией recreate
                 recreate();
             }
+
+            else if (Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)){
+                gameOver = false;
+                transCase = true;
+                setNecessaryScene("menuScene");
+            }
         }
     }
 
+    @Override
     public void recreate() {
         bird.recreate();
         obstacles.recreate();
         points.recreate();
-        gameOver = false;
+    }
+
+    @Override
+    public String getNecessaryScene() {
+            return necessaryScene;
+    }
+
+    @Override
+    public void setNecessaryScene(String scene) {
+        recreate();
+        necessaryScene = scene;
     }
 }

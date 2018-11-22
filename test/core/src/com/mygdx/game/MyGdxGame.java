@@ -3,11 +3,18 @@ package com.mygdx.game;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
-	MainGameScene mainGameScene;
+	SceneInterface mainGameScene;
+	SceneInterface menuScene;
+	// Словарь - имя сцены : объект сцены
+	Map<String, SceneInterface> scenes;
 
-	// Запускается единожды
+	// Метод запускается единожды.
     // В нем загружаются в память все необходимые элементы,
     /// производятся первичные расчеты
 	@Override
@@ -16,18 +23,35 @@ public class MyGdxGame extends ApplicationAdapter {
 		// Создание batch с помощью конструктора
 		batch = new SpriteBatch();
 		mainGameScene = new MainGameScene();
+		menuScene = new MenuScene();
+
+		// Инициализируем словарь со всеми сценами
+		scenes = new HashMap<String, SceneInterface>();
+
+		// Кладем в словарь элементы сцен игры
+		scenes.put("mainGameScene", mainGameScene);
+		scenes.put("menuScene", menuScene);
 	}
 
 	// Вызывается 60 раз в секунду
 	@Override
 	public void render () {
-	    // Обновляем все перед очередной отрисовкой
-        // (сам метод расположен ниже)
-	    mainGameScene.update();
-
-	    // Отрисовываем все после обновления
+	    // Отрисовываем все
 		batch.begin();  // Начало отрисовки
-		mainGameScene.render(batch);
+		for (SceneInterface scene : scenes.values()) {
+			String necScene = scene.getNecessaryScene();
+			if (necScene == "this") {
+				// Обновляем все перед очередной отрисовкой
+				// (сам метод расположен ниже)
+				scene.update();
+				scene.render(batch);
+				break;
+			}
+			else if (scene.getNecessaryScene() != null) {
+				scene.setNecessaryScene(null);
+				scenes.get(necScene).setNecessaryScene("this");
+			}
+		}
 		batch.end();  // Зкаканчиваем отрисовку
 	}
 
