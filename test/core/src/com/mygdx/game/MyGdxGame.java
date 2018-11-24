@@ -39,17 +39,29 @@ public class MyGdxGame extends ApplicationAdapter {
 	    // Отрисовываем все
 		batch.begin();  // Начало отрисовки
 		for (SceneInterface scene : scenes.values()) {
-			String necScene = scene.getNecessaryScene();
-			if (necScene == "this") {
+			if (scene.getNecessaryScene() == "this") {
 				// Обновляем все перед очередной отрисовкой
 				// (сам метод расположен ниже)
 				scene.update();
-				scene.render(batch);
+				// Если после обновления сцены смена сцены не требуется:
+				if (scene.getNecessaryScene() == "this") {
+					// Отрисовываем текущую сцену
+					scene.render(batch);
+				}
+				// Если же после обновления выяснилось,
+				// что нужно сменить текущую сцену:
+				else {
+					// Сохраняем идентификатор(в списке всех сцен(scenes)) сцены,
+					// на которую нужно сменить текущую сцену, в переменной necScene
+					String necScene = scene.getNecessaryScene();
+					// Меняем текущую сцену на новую
+					scenes.get(necScene).setNecessaryScene("this");
+					scene.setNecessaryScene(null);
+					// Отрисовываем новую сцену, идентификатор в списке
+					// всех сцен которой равен necScene
+					scenes.get(necScene).render(batch);
+				}
 				break;
-			}
-			else if (scene.getNecessaryScene() != null) {
-				scene.setNecessaryScene(null);
-				scenes.get(necScene).setNecessaryScene("this");
 			}
 		}
 		batch.end();  // Зкаканчиваем отрисовку
