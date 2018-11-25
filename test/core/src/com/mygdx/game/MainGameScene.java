@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class MainGameScene implements SceneInterface{
     // Сцена, которую надо отобразить
     String necessaryScene;
-    Background bg;
     Bird bird;
     Obstacles obstacles;
     Points points;
@@ -28,7 +27,6 @@ public class MainGameScene implements SceneInterface{
         // Это не первая сцена, которая
         // отображается при запуске игры
         necessaryScene = null;
-        bg = new Background(1);
         bird = new Bird();
         obstacles = new Obstacles();
         points = new Points();
@@ -43,7 +41,6 @@ public class MainGameScene implements SceneInterface{
 
     @Override
     public void render(SpriteBatch batch) {
-        bg.render(batch);
         bird.render(batch);
         obstacles.render(batch);
         if (gameOver)
@@ -67,7 +64,6 @@ public class MainGameScene implements SceneInterface{
                     setNecessaryScene("menuScene");
                 }
             }
-            bg.update();
             // Когда игрок в первый раз после проигрыша
             // нажал на SPACE, то до второго нажатия
             // птица не падает и трубы не вылезают
@@ -159,5 +155,13 @@ public class MainGameScene implements SceneInterface{
     public void setNecessaryScene(String scene) {
         recreate();
         necessaryScene = scene;
+    }
+
+    // Метод, определяющий должен ли задний фон
+    // двигаться в данный момент(не двигается он
+    // только во время конца игры)
+    @Override
+    public boolean bgMustMove() {
+        return !gameOver;
     }
 }

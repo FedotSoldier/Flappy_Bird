@@ -21,13 +21,14 @@ public class Background {
         }
     }
     // Скорость движения заднего фона(в пикселях)
-    private double speed;
+    private float speed;
     // Массив с элементами класса заднего фона
     private BGPicture[] backs;
 
     // Конструктор
-    public Background(double spd) {
-        speed = spd;
+    public Background() {
+        // По умолчанию скорость движения заднего фона равна нулю
+        speed = 0;
         // Массив с изображениями заднего фона
         backs = new BGPicture[2];
         // Два изображения заднего фона записываем в массив backs
@@ -37,7 +38,6 @@ public class Background {
 
     // Метод для отрисовок для фона
     public void render(SpriteBatch batch) {
-
         for (int i = 0; i < backs.length; i++) {
             batch.draw(backs[i].tx, backs[i].pos.x, backs[i].pos.y);
         }
@@ -50,5 +50,10 @@ public class Background {
             if (backs[i].pos.x <= -800)
                 backs[i].pos.x = 800;
         }
+    }
+
+    // Метод для задания скорости движения заднего фона
+    public void setSpeed(float speed) {
+        this.speed = speed;
     }
 }

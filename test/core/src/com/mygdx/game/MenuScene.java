@@ -7,23 +7,19 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class MenuScene implements SceneInterface{
     // Сцена, которую надо отобразить
     String necessaryScene;
-    Background bg;
 
     public MenuScene() {
         // Это первая сцена, которая
         // отображается при запуске игры
         necessaryScene = "this";
-        bg = new Background(0.5);
     }
 
     @Override
     public void render(SpriteBatch batch) {
-        bg.render(batch);
     }
 
     @Override
     public void update() {
-        bg.update();
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
             necessaryScene = "mainGameScene";
         }
@@ -42,5 +38,11 @@ public class MenuScene implements SceneInterface{
     public void setNecessaryScene(String scene) {
         recreate();
         necessaryScene = scene;
+    }
+
+    // На сцене меню задний фон всегда в движении
+    @Override
+    public boolean bgMustMove() {
+        return true;
     }
 }
