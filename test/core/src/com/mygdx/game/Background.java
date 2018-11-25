@@ -26,7 +26,7 @@ public class Background {
     private BGPicture[] backs;
 
     // Конструктор
-    public Background(double spd) {
+    public Background(float spd) {
         speed = spd;
         // Массив с изображениями заднего фона
         backs = new BGPicture[2];
@@ -50,5 +50,24 @@ public class Background {
             if (backs[i].pos.x <= -800)
                 backs[i].pos.x = 800;
         }
+    }
+
+    // Возвращает x координату одного из спрайтов заднего фона
+    public float getCord() {
+        return backs[0].pos.x;
+    }
+
+    // Задает координаты спрайтов заднего фона(их всего два)
+    public void setCord(float cord1) {
+        float cord2;
+        if (cord1 > 0) {
+            cord2 = cord1 - 800;
+        }
+        else {
+            cord2 = cord1 + 800;
+        }
+
+        backs[0].pos.x = cord1;
+        backs[1].pos.x = cord2;
     }
 }

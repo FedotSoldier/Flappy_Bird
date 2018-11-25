@@ -3,6 +3,7 @@ package com.mygdx.game;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -39,12 +40,12 @@ public class MyGdxGame extends ApplicationAdapter {
 	    // Отрисовываем все
 		batch.begin();  // Начало отрисовки
 		for (SceneInterface scene : scenes.values()) {
-			if (scene.getNecessaryScene() == "this") {
+			if (scene.getNecessaryScene().get(0) == "this") {
 				// Обновляем все перед очередной отрисовкой
 				// (сам метод расположен ниже)
 				scene.update();
 				// Если после обновления сцены смена сцены не требуется:
-				if (scene.getNecessaryScene() == "this") {
+				if (scene.getNecessaryScene().get(0) == "this") {
 					// Отрисовываем текущую сцену
 					scene.render(batch);
 				}
@@ -53,10 +54,11 @@ public class MyGdxGame extends ApplicationAdapter {
 				else {
 					// Сохраняем идентификатор(в списке всех сцен(scenes)) сцены,
 					// на которую нужно сменить текущую сцену, в переменной necScene
-					String necScene = scene.getNecessaryScene();
+					String necScene = (String) scene.getNecessaryScene().get(0);
 					// Меняем текущую сцену на новую
-					scenes.get(necScene).setNecessaryScene("this");
-					scene.setNecessaryScene(null);
+					scenes.get(necScene).setNecessaryScene(new ArrayList(Arrays.asList("this",
+																scene.getNecessaryScene().get(1))));
+					scene.setNecessaryScene(new ArrayList(Arrays.asList(null, "pass")));
 					// Отрисовываем новую сцену, идентификатор в списке
 					// всех сцен которой равен necScene
 					scenes.get(necScene).render(batch);

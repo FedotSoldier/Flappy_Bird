@@ -4,6 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainGameScene implements SceneInterface{
     // Сцена, которую надо отобразить
     String necessaryScene;
@@ -64,7 +67,7 @@ public class MainGameScene implements SceneInterface{
             }
             else if (Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)) {
                 if (transCase) {
-                    setNecessaryScene("menuScene");
+                    setNecessaryScene(new ArrayList(Arrays.asList("menuScene", "pass")));
                 }
             }
             bg.update();
@@ -138,7 +141,7 @@ public class MainGameScene implements SceneInterface{
             else if (Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)){
                 gameOver = false;
                 transCase = true;
-                setNecessaryScene("menuScene");
+                setNecessaryScene(new ArrayList(Arrays.asList("menuScene", "pass")));
             }
         }
     }
@@ -151,13 +154,20 @@ public class MainGameScene implements SceneInterface{
     }
 
     @Override
-    public String getNecessaryScene() {
-            return necessaryScene;
+    public ArrayList getNecessaryScene() {
+        // Возвращаем писок с идентификатором нужной сцены и
+        // координатой одного из спрайтов заднего фона
+        return new ArrayList(Arrays.asList(necessaryScene, bg.getCord()));
     }
 
     @Override
-    public void setNecessaryScene(String scene) {
-        recreate();
-        necessaryScene = scene;
+    public void setNecessaryScene(ArrayList list) {
+        if (list.get(0) != "pass") {
+            recreate();
+            necessaryScene = (String) list.get(0);
+        }
+        if (list.get(1) != "pass") {
+            bg.setCord((Float) list.get(1));
+        }
     }
 }
